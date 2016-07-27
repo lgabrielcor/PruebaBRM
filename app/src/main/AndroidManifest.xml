@@ -15,10 +15,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".vista.Marcas"
-            android:windowSoftInputMode="adjustPan|adjustResize"/>
-
-        <activity android:name=".vista.Productos"></activity>
+        <activity
+            android:name=".vista.Marcas"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity android:name=".vista.Productos" />
+        <activity android:name=".vista.EditarBorrar" />
+        <activity android:name=".ListaProductos"></activity>
     </application>
 
 </manifest>

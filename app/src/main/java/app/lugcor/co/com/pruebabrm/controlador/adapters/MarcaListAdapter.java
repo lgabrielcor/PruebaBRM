@@ -33,6 +33,11 @@ public class MarcaListAdapter extends BaseAdapter implements Filterable {
         this.marcaArrayList = (ArrayList<Marca>) objects;
     }
 
+    public class MarcaHolder
+    {
+        TextView nombre;
+        TextView id;
+    }
 
     @Override
     public int getCount() {
@@ -52,23 +57,34 @@ public class MarcaListAdapter extends BaseAdapter implements Filterable {
     @Override
     public View getView(int position, View convertView, ViewGroup parent){
 
-        LayoutInflater inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        //LayoutInflater inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        MarcaHolder marcaHolder;
 
-        View view = convertView;
+        //View view = convertView;
 
         if (null == convertView) { //Si no existe, entonces inflarlo
-            view = inflater.inflate(R.layout.itemmarca, parent, false);
+            //view = inflater.inflate(R.layout.itemmarca, parent, false);
+            convertView=LayoutInflater.from(context).inflate(R.layout.itemmarca, parent, false);
+            marcaHolder = new MarcaHolder();
+            marcaHolder.id = (TextView)convertView.findViewById(R.id.marcaId);
+            marcaHolder.nombre =(TextView)convertView.findViewById(R.id.nombreMarca);
+
+            convertView.setTag(marcaHolder);
+
+        }else
+        {
+            marcaHolder=(MarcaHolder) convertView.getTag();
         }
 
-        TextView nombre = (TextView)view.findViewById(R.id.nombreMarca);
-        TextView id = (TextView)view.findViewById(R.id.marcaId);
+//        TextView nombre = (TextView)convertView.findViewById(R.id.nombreMarca);
+//        TextView id = (TextView)convertView.findViewById(R.id.marcaId);
 
         Marca marca = (Marca)getItem(position);
 
-        nombre.setText(marca.getNombre());
-        id.setText(marca.getId()+"");
+        marcaHolder.nombre.setText(marca.getNombre());
+        marcaHolder.id.setText(marca.getId()+"");
 
-        return view;
+        return convertView;
     }
 
     public void notifyDataSetChanged() {
