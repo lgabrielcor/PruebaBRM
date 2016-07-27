@@ -6,11 +6,13 @@ import java.util.Date;
  * Created by luisgabrielcorredorcombita on 27/07/16.
  */
 public class Producto {
+    private int id;
     private String nombre;
     private String talla;
     private String observaciones;
     private int inventario;
     private Date fechaEmbarque;
+    private int marca;
 
     public String getNombre() {
         return nombre;
@@ -50,5 +52,21 @@ public class Producto {
 
     public void setFechaEmbarque(Date fechaEmbarque) {
         this.fechaEmbarque = fechaEmbarque;
+    }
+
+    public int getMarca() {
+        return marca;
+    }
+
+    public void setMarca(int marca) {
+        this.marca = marca;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

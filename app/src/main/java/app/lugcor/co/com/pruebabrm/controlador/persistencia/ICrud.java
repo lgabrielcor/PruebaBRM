@@ -9,7 +9,7 @@ public interface ICrud {
     boolean insertar(Object o);
     Object ObtenerItem(String id);
     List<Object> obtenerTodosLosItems();
-    List<Object> obtenerTodosLosItemsPorID(String id);
+    List<Object> obtenerTodosLosItemsPorID(String column, String id);
     boolean actualizarItem(Object nuevo, Object anterior);
     boolean borrarItem(Object elemento);
     boolean borrarTodosLosItems();
