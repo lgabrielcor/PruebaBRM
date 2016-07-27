@@ -20,6 +20,7 @@ public class MainActivity extends Activity {
 
     Button marcas, productos;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,12 +33,12 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 MarcaCrud cr = new MarcaCrud(getApplicationContext());
                 Marca marca = new Marca();
-                marca.setNombre("generico1");
+                marca.setNombre("1");
 
                 //insertar un item
                 cr.insertar(marca);
 
-                //obtener todos los items
+/*                //obtener todos los items
                 List<Object> marcas =  cr.obtenerTodosLosItems();
 
                 //obtener 1 item
@@ -47,7 +48,9 @@ public class MainActivity extends Activity {
                 List<Object> marcas2 =  cr.obtenerTodosLosItemsPorID("id",((Marca)marcas.get(0)).getId()+"");
 
                 //borrar un item
-                cr.borrarItem((Marca)marcas.get(0));
+                cr.borrarItem((Marca)marcas.get(0));*/
+
+
 
                 Intent intent = new Intent(getApplicationContext(), Marcas.class);
                 startActivity(intent);
