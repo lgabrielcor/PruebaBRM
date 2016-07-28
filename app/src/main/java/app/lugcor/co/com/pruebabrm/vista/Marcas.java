@@ -1,14 +1,11 @@
 package app.lugcor.co.com.pruebabrm.vista;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.database.DataSetObserver;
-import android.os.Debug;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.widget.Button;
 import android.widget.SearchView;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -24,7 +21,7 @@ public class Marcas extends AppCompatActivity implements SearchView.OnQueryTextL
 
     ListView marcas;
     SearchView search;
-
+    Button nuevo;
 
     @Override
     public void onResume() {
@@ -57,11 +54,19 @@ public class Marcas extends AppCompatActivity implements SearchView.OnQueryTextL
         marcas.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(getApplicationContext(), EditarBorrar.class);
-
+                Intent intent = new Intent(getApplicationContext(), EditarBorrarMarcasYListarProductos.class);
                 Bundle b = new Bundle();
                 b.putString("id", ((Marca)marcaListAdapter.getItem(position)).getId()+"");
                 intent.putExtras(b);
+                startActivity(intent);
+            }
+        });
+
+        nuevo= (Button)findViewById(R.id.buttonNuevo);
+        nuevo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), nuevaMarca.class);
                 startActivity(intent);
             }
         });

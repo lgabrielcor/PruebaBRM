@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@mipmap/fondoactividades"
+    tools:context=".vista.Productos">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24px">
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/nombreProducto"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:hint="Nombre"
+                android:background="#d9dedf"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24px">
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tallaProducto"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:hint="Talla S, M o L"
+                android:background="#d9dedf"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24px">
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/inventarioProducto"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:hint="Cantidad en inventario"
+                android:background="#d9dedf"/>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24px">
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/marcaProducto"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:background="#d9dedf"/>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24px">
+
+            <TextView
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/fechaEmbarqueProducto"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:background="#d9dedf"/>
+
+            <DatePicker
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/datePickerEmbarque" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="200px"
+            android:layout_marginTop="24px">
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="200px"
+                android:id="@+id/observacionesProducto"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:hint="Observaciones"
+                android:maxLines="14"
+                android:lines="14"
+                android:background="#d9dedf" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="24px">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Guardar"
+                android:id="@+id/guardarProductobtn"
+                android:background="@drawable/bk_boton_plano" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Borrar"
+                android:id="@+id/borrarBtn"
+                android:layout_gravity="right"
+                android:background="@drawable/bk_boton_plano"
+                android:layout_marginLeft="100px" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

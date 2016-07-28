@@ -7,6 +7,81 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="app.lugcor.co.com.pruebabrm.ListaProductos">
+    android:background="@mipmap/fondoactividades"
+    tools:context="app.lugcor.co.com.pruebabrm.ListaProductos"
+    android:clickable="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:weightSum="1"
+        android:id="@+id/linearLayout"
+        android:gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="buscar"
+            android:layout_marginTop="24px">
+
+            <SearchView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/searchProductos"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:icon="@android:drawable/ic_menu_search"
+                android:labelFor="@string/app_name"
+                android:background="@drawable/background"
+                android:clickable="true"
+                android:gravity="top" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24px">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nuevo Producto"
+                android:id="@+id/buttonNuevoProducto"
+                android:layout_gravity="right"
+                android:background="@drawable/bk_boton_plano"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="357dp"
+            android:layout_marginTop="24px"
+            android:id="@+id/contenidoMarca"
+            android:gravity="bottom"
+            android:weightSum="1">
+
+            <ListView
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/listaDeProductos"
+                android:background="#ffffff"
+                android:foregroundGravity="top|left|bottom|right" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
 
 </RelativeLayout>
